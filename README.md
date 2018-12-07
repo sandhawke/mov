@@ -1,4 +1,4 @@
-This schema is helpful for writing "movable" RDF schemas. RDF Schemas (also called ontologies or vocabulary definitions) are generally useful for providing interoperability between loosely coupled system, but they require URLs which remain stable over many years.
+This schema is helpful for writing "movable" RDF schemas. (We use the term "schema" to include "ontology" and "vocabulary definition", since the terms are equivalent in this context.) RDF schemas are generally useful for providing interoperability between loosely coupled systems, but they require URLs which remain stable over many years.
 
 Movable schemas, in contrast, allow interoperability even when moved to different URLs.  For example, while the original version of this document was (and perhaps still is) hosted at <https://sandhawke.github.io/mov>, it is possible (and recommended) to use this schema in ways which do not involve trusting either github or the author, such as by forking it or copying it to your own server.
 
@@ -22,9 +22,9 @@ The basic concept is that we identify each RDF property (and class, etc) using s
 
 In practice, to create a movable schema, you need to provide suitable definition text for each resource in your schema using this **mov** schema.  The definition should be a few lines of text, specifying the item well enough that a careful expert reader who is confident they understand the text is very likely to be right.  For machine purposes, the important thing is that the text has enough entropy that it is statistically unlikely to accidentally be the same as someone else's definition of another term.
 
-These definitions can be embedded in your data or provided nearby, like by a schema file in the same directory. You can also point to the original provider, like with non-movable schemas, if you happen to trust them sufficiently.
+These definitions can be embedded in your data or provided nearby, like by a schema file in the same directory. You can also point to the original provider, as you would be with a non-movable schema, if you happen to trust them sufficiently.
 
-To consume movable schemas, with all the data integration benefits of non-movable schemas, an additional software layer is required to first do the merging based on definition matches.  This layer can be built into tools or executed before the data is loaded into conventional tools.   (It might be possible to build a translating proxy, but https makes that very difficult.)
+To consume movable schemas, with all the data integration benefits of non-movable schemas, an additional software layer is required to first do the merging based on definition matches.  This layer can be built into tools or executed before the data is loaded into conventional tools.   (It might be possible to build a translating proxy, but https would make this very difficult.)
 
 ## Terms
 
