@@ -14,22 +14,26 @@ For JSON-LD, the location/namespace is also the @context URL.
 
 ## Concept
 
-The basic concept is that we identify each RDF property (and class, etc) using some definition text, not its URI. It still has a URI, but the URI doesn't have to match other occurances of the property (in other data sources, or in data-consuming software), because the match will also be done using the definition text.  This additional matching is specified in OWL, but the implementation is simple and not require using or understanding OWL.
+The basic concept is that we identify each RDF property (and class, etc) using some definition text, not its URI. It still has a URI, but the URI doesn't have to match other occurances of the property (in other data sources, or in data-consuming software), because the match will also be done using the definition text.  This additional matching is specified in OWL, but the implementation is simple and does not require using or understanding OWL.
 
 ## Practice
 
-In practice, to create a movable schema, you need to provide suitable definition text for each resource in your schema using this mov schema.  The definition should be a few lines of text, specifying the item well enough that a careful expert reader who is confident they understand the text is quite unlikely to be wrong in any observable way.
+In practice, to create a movable schema, you need to provide suitable definition text for each resource in your schema using this **mov** schema.  The definition should be a few lines of text, specifying the item well enough that a careful expert reader who is confident they understand the text is very likely to be right.
 
 ## Terms
 
-### mov:itemdef
+### **mov:itemdef**
 
 This can be used for defining any resource.  In practice, it should only be used for resources which are _not_ an rdf:Property or an rdf:Class, since they are more easily defined using mov:propdef and mov:classdef.
 
 
-### mov:propdef
+### **mov:propdef**
 
-### mov:classdef
+### **mov:classdef**
+
+## Implementations
+
+
 
 <script type="application/ld+json">
 // schema.jsonld should be copied here
