@@ -20,7 +20,7 @@ The basic concept is that we identify each RDF property (and class, etc) using s
 
 ## Practice
 
-In practice, to create a movable schema, you need to provide suitable definition text for each resource in your schema using this **mov** schema.  The definition should be a few lines of text, specifying the item well enough that a careful expert reader who is confident they understand the text is very likely to be right.  For machine purposes, the important thing is that the text has enough entropy that it is statistically unlikely to accidentally be the same as someone else's definition of another term.
+In practice, to create a movable schema, you need to provide suitable definition text for each resource in your schema using this **mov** schema.  The definition should be a few lines of text, specifying the item well enough that a careful expert reader who is confident they understand the text is very likely to be right.  (For machine purposes, the important thing is that the text has enough entropy that it is statistically unlikely to accidentally be the same as someone else's definition of another term.  By requiring the definitions to be meaningful and unambiguous to people, the same string should only be coincidentally selected when the meaning is the same.)
 
 These definitions can be embedded in your data or provided nearby, like by a schema file in the same directory. You can also point to the original provider, as you would be with a non-movable schema, if you happen to trust them sufficiently.
 
