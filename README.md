@@ -90,6 +90,7 @@ Consumers do have the ability to override your decision, above, in that they can
 // Text below this line is intended to be hidden, but may show up on some systems.  Please ignore it.
 </script>
 
+<hr />
 
 <script type="application/ld+json">
 // schema.jsonld should be copied here
