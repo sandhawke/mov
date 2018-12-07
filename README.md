@@ -32,7 +32,7 @@ To consume movable schemas, with all the data integration benefits of non-movabl
 
 This can be used for defining any resource.  In practice, it should only be used for resources which are _not_ an rdf:Property or an rdfs:Class, since they are more easily defined using mov:propdef and mov:classdef.
 
-Example:
+#### Example
 
 ```turtle
 PREFIX mov: <https://sandhawke.github.io/mov/schema.ttl#>
@@ -44,7 +44,9 @@ PREFIX : <.#>
 
 This is used for defining RDF properties, such that they can be textually matched even when using different URIs.
 
-Example 1: definition and instance data in same file
+#### Example 1
+
+This example shows definition and instance data in same file, and uses a quite verbose dictionary-style definition.
 
 ```turtle
 PREFIX mov: <https://sandhawke.github.io/mov/schema.ttl#>
@@ -53,7 +55,11 @@ PREFIX : <.#>
 :Luke :familyName "Skywalker".
 ```
 
-Example 2, definition and instance data in nearby files, and using a template-style definition, instead of dictionary-style. This example uses the feature that matching ignores contents in square brackets, and pushes the limit of short definitions. Given the wide consensus on what "family name" means, this is probably okay for most applications.
+#### Example 2
+
+This example shows the definition and instance data in different files on the same site.  It also uses template-style definition, instead of dictionary-style. this style makes use of the feature that matching ignores contents in square brackets.
+
+This example also pushes the limit of short definitions. Given the wide consensus on what "family name" means, this is probably okay for most applications.
 
 At https://example.org/schema:
 
