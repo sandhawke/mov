@@ -44,7 +44,7 @@ PREFIX : <.#>
 
 This is used for defining RDF properties, such that they can be textually matched even when using different URIs.
 
-Example 1:
+Example 1: definition and instance data in same file
 
 ```turtle
 PREFIX mov: <https://sandhawke.github.io/mov/schema.ttl#>
@@ -53,12 +53,22 @@ PREFIX : <.#>
 :Luke :familyName "Skywalker".
 ```
 
-Example 2, using a template-style definition, instead of dictionary-style. This example uses the feature that matching ignores contents in square brackets, and pushes the limit of short definitions. Given the wide consensus on what "family name" means, this is probably okay for most applications.
+Example 2, definition and instance data in nearby files, and using a template-style definition, instead of dictionary-style. This example uses the feature that matching ignores contents in square brackets, and pushes the limit of short definitions. Given the wide consensus on what "family name" means, this is probably okay for most applications.
+
+At https://example.org/schema:
 
 ```turtle
 PREFIX mov: <https://sandhawke.github.io/mov/schema.ttl#>
-PREFIX : <.#>
-:familyName mov:propdef "[subject ref] has the family name [value string].".
+PREFIX ex: <https://example.org/schema#>
+ex:familyName mov:propdef "[subject ref] has the family name [value string].".
+```
+
+At https://example.org/data:
+
+```turtle
+PREFIX mov: <https://sandhawke.github.io/mov/schema.ttl#>
+PREFIX ex: <https://example.org/schema#>
+:Luke ex:familyName "Skywalker".
 ```
 
 ### **mov:classdef**
