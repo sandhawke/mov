@@ -50,6 +50,7 @@ Example 1:
 PREFIX mov: <https://sandhawke.github.io/mov/schema.ttl#>
 PREFIX : <.#>
 :familyName mov:propdef "The family name of some person. This name is usually assigned at birth, identical to or derived from the parents' family names. Siblings in the same family are usually given the same family name, and family names usually only change with adoption or, for some people in some cultures, marriage. Typically, a person's name is their family name and given name combined in an order that depends on context.".
+:Luke :familyName "Skywalker".
 ```
 
 Example 2, using a template-style definition, instead of dictionary-style. This example uses the feature that matching ignores contents in square brackets, and pushes the limit of short definitions. Given the wide consensus on what "family name" means, this is probably okay for most applications.
