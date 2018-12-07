@@ -30,7 +30,7 @@ To consume movable schemas, with all the data integration benefits of non-movabl
 
 ### **mov:itemdef**
 
-This can be used for defining any resource.  In practice, it should only be used for resources which are _not_ an rdf:Property or an rdf:Class, since they are more easily defined using mov:propdef and mov:classdef.
+This can be used for defining any resource.  In practice, it should only be used for resources which are _not_ an rdf:Property or an rdfs:Class, since they are more easily defined using mov:propdef and mov:classdef.
 
 Example:
 
