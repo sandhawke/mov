@@ -37,7 +37,7 @@ Example:
 ```turtle
 @prefix mov: <https://sandhawke.github.io/mov/schema.ttl#>
 @prefix : <.#>
-:Tatooine mov:itemdef "Item is a fictional location, a planet called 'Tatooine' in the Star Wars franchise. It was introduced in the 1977 film _Star Wars_ as the home of protagonist Luke Skywalker."
+:Tatooine mov:itemdef "A fictional location, a planet called 'Tatooine' in the Star Wars franchise. It was introduced in the 1977 film _Star Wars_ as the home of protagonist Luke Skywalker."
 ```
 
 ### **mov:propdef**
@@ -52,7 +52,7 @@ Example 1:
 :familyName mov:propdef "The family name of some person. This name is usually assigned at birth, identical to or derived from the parents' family names. Siblings in the same family are usually given the same family name, and family names usually only change with adoption or, for some people in some cultures, marriage. Typically, a person's name is their family name and given name combined in an order that depends on context."
 ```
 
-Example 2, using a template-style definition, instead of dictionary-style. This example uses the feature that matching ignores contents in square brackets, and pushes the limit of short definitions.
+Example 2, using a template-style definition, instead of dictionary-style. This example uses the feature that matching ignores contents in square brackets, and pushes the limit of short definitions. Given the wide consensus on what "family name" means, this is probably okay for most applications.
 
 ```turtle
 @prefix mov: <https://sandhawke.github.io/mov/schema.ttl#>
@@ -62,16 +62,17 @@ Example 2, using a template-style definition, instead of dictionary-style. This 
 
 ### **mov:classdef**
 
+tbd
 
 ## Modifying your definitions
 
-Often, after using some definitions you developed for a while, you will thinkg of better wording, or otherwise want to change the definitions you provided. We suggest keeping the old wording if anyone might be using it or interested in it, and just adding the new wording, as a new definition.
+Often, after some experience using term definitions you developed, you will think of better wording, or otherwise want to change the text. We suggest keeping the old wording if anyone might be using it or interested in it, and just adding the new wording, as a new definition.
 
 There are two ways to add these new defintions:
 
-1. If the change is purely editorial and does not reflect a change in your intended meaning, then the change is nonbreaking.  You can simply add the new definition to the same term.  This asserts you consider the definitions to be synonymous.
+1. If the change is purely **editorial** and does not reflect a change in your intended meaning, then the change is nonbreaking.  You can simply add the new definition to the same term.  This asserts you consider the definitions to be synonymous.
 
-2. If the change does reflect a change in your intended meaning, then it is substantive and is a breaking change. If systems conflate the two meanings, they might get incorrect results. For a change like this, you need to make up a new term URI and put the new definition on that term.  (You can rename terms if, and only if, all supported consumers are movable-schema-aware.)
+2. If the change does reflect a change in your intended meaning, then it is **substantive** and is a breaking change. If systems conflate the two meanings, they might get incorrect results. For a change like this, you need to make up a new term URI and put the new definition on that term.  (You can rename terms if, and only if, all supported consumers are movable-schema-aware.)
 
 Consumers do have the ability to override your decision, above, in that they can choose which definitions to use for each of the terms they consume. When you treat the change as editorial/nonbreaking, they might decided not to use one of the definitions you equate, because they do not consider them sufficiently synonymous.  Alternatively, if you treat the change as substantive/breaking, they might decide for their application the definitions are close enough and equate them.
 
