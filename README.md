@@ -1,5 +1,3 @@
-# mov: an RDF Schema for making movable RDF schemas
-
 This schema is helpful for writing "movable" RDF schemas. Schemas (also called ontologies or vocabulary definitions) which are movable retain their semantics even when moved to different URLs.  For example, while the original version of this document is hosted at <https://sandhawke.github.io/mov>, it is possible (and recommended) to use this schema in other ways which do not involve trusting either github or the author (such as by forking it or copying it to your own server).
 
 In fact, due to limitions of github hosting, the namespace URL for this schema is different for different formats.  This would normally break interoperability, but with movable schemas, it's fine.
