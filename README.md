@@ -84,6 +84,12 @@ Consumers do have the ability to override your decision, above, in that they can
 
 ...
 
+<hr />
+
+<script>
+// Text below this line is intended to be hidden, but may show up on some systems.  Please ignore it.
+</script>
+
 
 <script type="application/ld+json">
 // schema.jsonld should be copied here
