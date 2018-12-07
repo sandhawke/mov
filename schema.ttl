@@ -1,0 +1,6 @@
+@prefix owl: <http://www.w3.org/2007/owl#>.
+@prefix mov: <https://sandhawke.github.io/movable/schema.ttl#>
+
+mov:itemdef mov:itemdef `Item is a "property", a mathematical binary relation, mapping from some "subject" entity to some "value" entity such that, in relation to the subject, the value is as follows: a text string which defines the subject, typically by describing some of its qualities such that a careful expert reader would be unlikely to imagine the item to be significantly different from the intended item.`
+mov:itemdef rdf:type owl:InverseFunctionalProperty.
+
