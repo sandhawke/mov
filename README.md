@@ -16,11 +16,11 @@ For JSON-LD, the location/namespace is also the @context URL.
 
 ## Concept
 
-The basic concept is that we identify each RDF property (and class, etc) using some definition text, not its URI. It still has a URI, but the URI doesn't have to match other references of the property, because the match will also be done using the definition text.  What's needed is that each data source being merged, and each system consuming the data, use the same definition text.  In some ways this is more cumbersome than using the same URI, but in other ways it is simpler.
+The basic concept is that we identify each RDF property (and class, etc) using some definition text, not its URI. It still has a URI, but the URI doesn't have to match other references to the property, because the match will also be done using the definition text.  What's needed is that each data source being merged, and each system consuming the data, use the same definition text.  In some ways this is more cumbersome than using the same URI, but in other ways it is simpler.
 
 ## Practice
 
-In practice, to create a movable schema, you need to provide suitable definition text for each resource in your schema using this **mov** schema.  The definition should be a few lines of text, specifying the item well enough that a careful expert reader who is confident they understand the text is very likely to be right.
+In practice, to create a movable schema, you need to provide suitable definition text for each resource in your schema using this **mov** schema.  The definition should be a few lines of text, specifying the item well enough that a careful expert reader who is confident they understand the text is very likely to be right.  For machine purposes, the important thing is that the text has enough entropy that it is statistically unlikely to accidentally be the same as someone else's definition of another term.
 
 These definitions can be embedded in your data or provided nearby, like by a schema file in the same directory. You can also point to the original provider, like with non-movable schemas, if you happen to trust them sufficiently.
 
