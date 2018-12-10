@@ -16,11 +16,11 @@ For JSON-LD, the location/namespace is also the @context URL.
 
 ## Concept
 
-The basic concept is that we identify each RDF property (and class, etc) using some definition text, not its URI. It still has a URI, but the URI doesn't have to match other references to the property, because the match will also be done using the definition text.  What's needed is that each data source being merged, and each system consuming the data, use the same definition text.  In some ways this is more cumbersome than using the same URI, but in other ways it is simpler.
+The basic concept is that we identify each RDF property (and class, etc) using some definition text, not its URI. It still has a URI, but the URI doesn't have to match other references to the property, because the match will also be done using the definition text.  What's needed is that the same definition text be used by each data source being merged and each system consuming the data. In some ways this is more cumbersome than using the same URI, but in other ways it is simpler.
 
 ## Practice
 
-In practice, to create a movable schema, you need to provide suitable definition text for each resource in your schema using this **mov** schema.  The definition should be a few lines of text, specifying the item well enough that a careful expert reader who is confident they understand the text is very likely to be right.  (For machine purposes, the important thing is that the text has enough entropy that it is statistically unlikely to accidentally be the same as someone else's definition of another term.  By requiring the definitions to be meaningful and unambiguous to people, the same string should only be coincidentally selected when the meaning is the same.)
+In practice, to create a movable schema, you need to provide suitable definition text for each resource in your schema.  Those definition are provided using this **mov** schema.  The definitions should each be a few lines of text, specifying the item well enough that a careful expert reader who is confident they understand the text is very likely to be right.  (For machine purposes, the important thing is that the text has enough entropy that it is statistically unlikely to accidentally be the same as someone else's definition of another term.  By requiring the definitions to be meaningful and unambiguous to people, we can have relatively short strings which should only be coincidentally selected when the meaning is the same.)
 
 These definitions can be embedded in your data or provided nearby, like by a schema file in the same directory. You can also point to the original provider, as you would be with a non-movable schema, if you happen to trust them sufficiently.
 
@@ -57,16 +57,18 @@ PREFIX : <.#>
 
 #### Example 2
 
-This example shows the definition and instance data in different files on the same site.  It also uses template-style definition, instead of dictionary-style. this style makes use of the feature that matching ignores contents in square brackets.
+This example shows the definition and instance data in different files on the same site.  It also uses template-style definition, instead of dictionary-style. This style makes use of the feature that matching ignores contents in square brackets.
 
 This example also pushes the limit of short definitions. Given the wide consensus on what "family name" means, this is probably okay for most applications.
 
 At https://example.org/schema:
 
 ```turtle
-PREFIX mov: <https://sandhawke.github.io/mov/schema.ttl#>
 PREFIX ex: <https://example.org/schema#>
 ex:familyName mov:propdef "[subject ref] has the family name [value string].".
+
+### definition from  <https://sandhawke.github.io/mov/schema.ttl#>
+
 ```
 
 At https://example.org/data:
@@ -76,6 +78,9 @@ PREFIX mov: <https://sandhawke.github.io/mov/schema.ttl#>
 PREFIX ex: <https://example.org/schema#>
 :Luke ex:familyName "Skywalker".
 ```
+
+In practice the mov: schema definitions might also be copied into
+<https://example.org/schema>, to avoid external dependencies.
 
 ### **mov:classdef**
 
